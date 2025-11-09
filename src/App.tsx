@@ -55,6 +55,7 @@ function App() {
           >
             <option value="OLD_BABYLONIA">{ERA_LABELS.OLD_BABYLONIA}</option>
             <option value="SELEUCID_ERA">{ERA_LABELS.SELEUCID_ERA}</option>
+            <option value="EXTENDED_POSITIONAL">{ERA_LABELS.EXTENDED_POSITIONAL}</option>
           </select>
         </div>
 

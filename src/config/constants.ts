@@ -5,7 +5,7 @@
 /**
  * Historical eras with different zero representation conventions
  */
-export type BabylonianEra = 'OLD_BABYLONIA' | 'SELEUCID_ERA';
+export type BabylonianEra = 'OLD_BABYLONIA' | 'SELEUCID_ERA' | 'EXTENDED_POSITIONAL';
 
 /**
  * Era display names for UI
@@ -13,6 +13,7 @@ export type BabylonianEra = 'OLD_BABYLONIA' | 'SELEUCID_ERA';
 export const ERA_LABELS: Record<BabylonianEra, string> = {
   OLD_BABYLONIA: 'Old Babylonia',
   SELEUCID_ERA: 'Seleucid Era',
+  EXTENDED_POSITIONAL: 'Extended notation, may not authentic',
 } as const;
 
 /**
@@ -22,7 +23,7 @@ export const BABYLONIAN_CONFIG = {
   /** Base of the Babylonian number system (sexagesimal) */
   BASE: 60,
   /** Default number to display on app load */
-  DEFAULT_NUMBER: 3661,
+  DEFAULT_NUMBER: 3601,
   /** Minimum allowed input number */
   MIN_NUMBER: 0,
   /** Default historical era */
