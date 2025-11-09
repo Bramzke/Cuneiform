@@ -12,7 +12,7 @@ export const ZeroSymbol: React.FC = () => (
     viewBox="0 0 20 20"
     preserveAspectRatio="xMidYMid meet"
     style={{ width: '50%', height: '50%' }}  >
-    {/* Horizontal wedge shape representing the number 0 */}
+    {/* Horizontal wedge shapes representing the number 0 */}
     <path
       d="m 2.72,0
 c 0,0 -0.45,1.67 -0.91,2.38 -0.47,0.72 -1.81,1.81 -1.81,1.81 0,0 3.23,0.71 4.77,1.31 4.77,1.86 13.64,7.07 13.64,7.07 0,0 -8.42,-5.83 -12.28,-9.17
