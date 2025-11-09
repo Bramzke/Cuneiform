@@ -1,0 +1,85 @@
+/* BabylonianDigit Component Styles */
+/* This module uses CSS variables that can be overridden for theming */
+
+:root {
+  /* Color scheme */
+  --cuneiform-bg: #f0e8d9;
+  --cuneiform-border: #d4c8b0;
+  --cuneiform-symbol-color: #5a4e3a;
+
+  /* Dimensions */
+  --cuneiform-container-width: 100px;
+  --cuneiform-container-height: 80px;
+  --cuneiform-padding: 5px;
+  --cuneiform-margin: 5px;
+  --cuneiform-border-radius: 5px;
+
+  /* Spacing */
+  --cuneiform-symbol-gap: 1px;
+}
+
+/* Ensure box-sizing is consistent */
+.babylonianDigitContainer,
+.babylonianDigitContainer * {
+  box-sizing: border-box;
+}
+
+/* Main container for a single Babylonian digit */
+.babylonianDigitContainer {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--cuneiform-bg);
+  border: 1px solid var(--cuneiform-border);
+  border-radius: var(--cuneiform-border-radius);
+  padding: var(--cuneiform-padding);
+  margin: var(--cuneiform-margin);
+  width: var(--cuneiform-container-width);
+  height: var(--cuneiform-container-height);
+  font-family: serif;
+  font-weight: bold;
+  color: var(--cuneiform-symbol-color); /* This color is inherited by SVGs! */
+}
+
+/* Container for tens symbols (left column) */
+.tensBlock {
+  display: grid;
+  height: 100%;
+  width: 50%;
+  align-items: stretch; /* Ensures rows take full height */
+  justify-items: center;
+}
+
+/* Container for ones symbols (right column) */
+.onesBlock {
+  display: grid;
+  height: 100%;
+  width: 50%;
+  align-items: stretch; /* Ensures rows take full height */
+  justify-items: center;
+}
+
+/* Container for zero symbol (full width) */
+.zeroBlock {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Grid template classes for different row counts */
+.rows1 { grid-template-rows: 1fr; }
+.rows2 { grid-template-rows: 1fr 1fr; }
+.rows3 { grid-template-rows: 1fr 1fr 1fr; }
+
+/* Individual row containing symbols */
+.symbolRow {
+  display: grid;
+  grid-auto-flow: column; /* Arranges symbols side by side */
+  grid-template-rows: 100%; /* Ensures content takes 100% of row height */
+  gap: var(--cuneiform-symbol-gap);
+  width: 100%;
+  height: 100%;
+  min-height: 0; /* Prevents overflow from min-height: auto */
+}
