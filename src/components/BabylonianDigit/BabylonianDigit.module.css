@@ -59,6 +59,16 @@
   justify-items: center;
 }
 
+/* Centered layout when only tens are present (no ones) */
+.tensOnly {
+  width: 50%;
+}
+
+/* Centered layout when only ones are present (no tens) */
+.onesOnly {
+  width: 50%;
+}
+
 /* Container for zero symbol (full width) */
 .zeroBlock {
   display: flex;

@@ -83,14 +83,30 @@ export const BabylonianDigit: React.FC<BabylonianDigitProps> = ({
     <SymbolRow key={`ones-${index}`} SymbolComponent={OneSymbol} count={count} />
   ));
 
+  // Determine if we should center a single column
+  const hasTensOnly = tens > 0 && ones === 0;
+  const hasOnesOnly = tens === 0 && ones > 0;
+
   return (
     <div className={styles.babylonianDigitContainer}>
-      <div className={`${styles.tensBlock} ${styles[tensLayout.gridClassName]}`}>
-        {tensRows}
-      </div>
-      <div className={`${styles.onesBlock} ${styles[onesLayout.gridClassName]}`}>
-        {onesRows}
-      </div>
+      {tens > 0 && (
+        <div
+          className={`${styles.tensBlock} ${styles[tensLayout.gridClassName]} ${
+            hasTensOnly ? styles.tensOnly : ''
+          }`}
+        >
+          {tensRows}
+        </div>
+      )}
+      {ones > 0 && (
+        <div
+          className={`${styles.onesBlock} ${styles[onesLayout.gridClassName]} ${
+            hasOnesOnly ? styles.onesOnly : ''
+          }`}
+        >
+          {onesRows}
+        </div>
+      )}
     </div>
   );
 };
