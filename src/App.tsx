@@ -43,10 +43,10 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Babylonian Cuneiform Converter</h1>
+      <h1>Decimal to Babylonian Cuneiform Numeral Converter</h1>
       <div className="converter-container">
         <div className="era-selection">
-          <label htmlFor="era-select">Historical Era:</label>
+          <label htmlFor="era-select">zero notation:</label>
           <select
             id="era-select"
             value={selectedEra}
